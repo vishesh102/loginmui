@@ -1,9 +1,13 @@
 import { Box, display } from "@mui/system";
 import React from "react";
 import ButtonIndex from "../Button/ButtonIndex";
+import DateTime from "./Items/DateTime";
+import FormCheckBox from "./Items/FormCheckBox";
+import FormRadio from "./Items/FormRadio";
 
 import FormSelect from "./Items/FormSelect";
 import FormTextFieldsIndex from "./Items/FormTextFieldsIndex";
+
 import UploadInput from "./Items/UploadInput";
 
 function FormIndex() {
@@ -52,7 +56,16 @@ function FormIndex() {
           <FormSelect menuItem={city} placeholder="chose your city" />
         </Box>
       </Box>
+      <Box></Box>
       <UploadInput placeholder="Upload A Profile Picture. Max Size 2MB" />
+      <Box>
+        <DateTime />
+      </Box>
+      <Box sx={{ display: "flex" }}>
+        <FormCheckBox />
+        <FormCheckBox />
+        <FormRadio />
+      </Box>
     </Box>
   );
 }

@@ -9,26 +9,24 @@ import { Image } from "@mui/icons-material";
 function UploadInput() {
   return (
     <Box>
-      <TextField
-        sx={{ background: "#F5F5F5" }}
-        fullWidth
-        multiline
-        rows={2}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="end">
-              <Icon>
-                <Image fontSize="6rem" />
-              </Icon>
-            </InputAdornment>
-          ),
-          endAdornment: (
-            <InputAdornment position="end">
-              <ButtonIndex variant="outlined" />
-            </InputAdornment>
-          ),
+      <Box
+        sx={{
+          background: "#F5F5F5",
+          border: "1px solid gray",
+          display: "flex",
+          justifyContent: "space-between",
+          p: "1rem",
+          borderRadius: "0.3rem",
+          color: "gray",
         }}
-      />
+        fullWidth
+      >
+        <Icon>
+          <Image fontSize="6rem" />
+        </Icon>
+        Upload A Profile Picture. Max Size 2MB
+        <ButtonIndex variant="outlined" />
+      </Box>
     </Box>
   );
 }
