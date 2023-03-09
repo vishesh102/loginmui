@@ -5,6 +5,8 @@ import ButtonIndex from "../../Button/ButtonIndex";
 import { Stack, TextField, Button, Icon } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import { Image } from "@mui/icons-material";
+import theme from "../../../Assets/Theme";
+import { ThemeProvider } from "styled-components";
 
 function UploadInput() {
   return (
@@ -17,7 +19,7 @@ function UploadInput() {
           justifyContent: "space-between",
           p: "1rem",
           borderRadius: "0.3rem",
-          color: "gray",
+          m: "0.5rem 0",
         }}
         fullWidth
       >
@@ -25,7 +27,12 @@ function UploadInput() {
           <Image fontSize="6rem" />
         </Icon>
         Upload A Profile Picture. Max Size 2MB
-        <ButtonIndex variant="outlined" />
+        <ButtonIndex
+          color="gray"
+          variant="outlined"
+          text="Upload"
+          selectImg={<input hidden accept="image/*" multiple type="file" />}
+        />
       </Box>
     </Box>
   );

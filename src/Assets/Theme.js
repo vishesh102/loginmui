@@ -5,11 +5,11 @@ const theme = createTheme({
   palette: {
     type: "light",
     primary: {
-      main: "#655DBB",
-      light: "rgba(171,199,38,0.93)",
+      main: "#14809E",
+      light: "#3F3F3F",
     },
     secondary: {
-      main: "#f50057",
+      main: "#3F3F3F",
       light: "#337af7",
       contrastText: "rgba(0,0,0,0.87)",
     },
@@ -18,7 +18,11 @@ const theme = createTheme({
       paper: "#ffffff",
     },
     text: {
-      primary: "rgba(208,68,46,0.87)",
+      primary: "#3F3F3F",
+    },
+    typography: {
+      fontFamily: ["Roboto"],
+      fontSize: 10,
     },
   },
 });

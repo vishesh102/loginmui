@@ -10,14 +10,9 @@ function FormSelect({ menuItem, placeholder }) {
   };
 
   return (
-    <Box sx={{ mt: "0.5rem", mb: "0.5rem" }}>
+    <Box sx={{ m: "0.5rem 0" }}>
       <FormControl fullWidth>
-        <InputLabel
-          sx={{ mb: 0.5, font: "14px" }}
-          id="demo-simple-select-label"
-        >
-          {placeholder}
-        </InputLabel>
+        <InputLabel id="demo-simple-select-label">{placeholder}</InputLabel>
         <Select
           size="small"
           sx={{ background: "#F5F5F5" }}

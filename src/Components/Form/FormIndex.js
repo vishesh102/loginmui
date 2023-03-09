@@ -44,6 +44,7 @@ function FormIndex() {
       </Box>
       <Box>
         <FormTextFieldsIndex
+          variant="outlined"
           placeholder="Additional Message"
           multiline={true}
         />
@@ -56,15 +57,18 @@ function FormIndex() {
           <FormSelect menuItem={city} placeholder="chose your city" />
         </Box>
       </Box>
-      <Box></Box>
+
       <UploadInput placeholder="Upload A Profile Picture. Max Size 2MB" />
       <Box>
         <DateTime />
       </Box>
       <Box sx={{ display: "flex" }}>
-        <FormCheckBox />
-        <FormCheckBox />
-        <FormRadio />
+        <FormCheckBox label="checkBox 1" />
+        <FormCheckBox label="checkBox 2" />
+        <FormRadio radio1="Radio1" radio2="Radio2" />
+      </Box>
+      <Box sx={{ m: "2rem 0" }}>
+        <ButtonIndex variant="contained" text="Submit Your Form" />
       </Box>
     </Box>
   );
