@@ -1,12 +1,10 @@
 import React from "react";
-import FormTextFieldsIndex from "./FormTextFieldsIndex";
+
 import { Box } from "@mui/system";
 import ButtonIndex from "../../Button/ButtonIndex";
-import { Stack, TextField, Button, Icon } from "@mui/material";
-import InputAdornment from "@mui/material/InputAdornment";
+import { Icon } from "@mui/material";
+
 import { Image } from "@mui/icons-material";
-import theme from "../../../Assets/Theme";
-import { ThemeProvider } from "styled-components";
 
 function UploadInput() {
   return (
@@ -14,7 +12,7 @@ function UploadInput() {
       <Box
         sx={{
           background: "#F5F5F5",
-          border: "1px solid gray",
+          border: "1px dashed gray",
           display: "flex",
           justifyContent: "space-between",
           p: "1rem",
@@ -29,6 +27,7 @@ function UploadInput() {
         Upload A Profile Picture. Max Size 2MB
         <ButtonIndex
           color="gray"
+          background="white"
           variant="outlined"
           text="Upload"
           selectImg={<input hidden accept="image/*" multiple type="file" />}
