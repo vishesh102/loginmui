@@ -44,11 +44,16 @@ function FormIndex() {
   return (
     <Box sx={{ width: "60%", m: "0 auto", color: "text.secondary" }}>
       <Box sx={{ mb: "2rem" }}>
+        {/* Heading and Sub heading of register page */}
+
         <Box sx={{ color: "black" }}>
           <h1>Create an account</h1>
         </Box>
         <p>Describe yourself as clearly so that there is no mistake</p>
       </Box>
+
+      {/* firstname and last name */}
+
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box sx={{ width: "48%" }}>
           <FormTextFieldsIndex
@@ -60,6 +65,7 @@ function FormIndex() {
             placeholder="Enter Your First Name"
           />
         </Box>
+
         <Box sx={{ width: "48%" }}>
           <FormTextFieldsIndex
             setData={setData}
@@ -72,6 +78,10 @@ function FormIndex() {
           />
         </Box>
       </Box>
+      {/* // */}
+
+      {/* email */}
+
       <Box>
         <FormTextFieldsIndex
           variant="outlined"
@@ -81,6 +91,9 @@ function FormIndex() {
           placeholder="Enter Your Email Id Name"
         />
       </Box>
+      {/* // */}
+
+      {/* Descripton */}
       <Box>
         <FormTextFieldsIndex
           variant="outlined"
@@ -88,6 +101,9 @@ function FormIndex() {
           multiline={true}
         />
       </Box>
+      {/* // */}
+
+      {/* state and city */}
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box sx={{ width: "48%" }}>
           <FormSelect menuItem={state} placeholder="chose your state" />
@@ -96,6 +112,8 @@ function FormIndex() {
           <FormSelect menuItem={city} placeholder="chose your city" />
         </Box>
       </Box>
+
+      {/* clinic name */}
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box sx={{ width: "48%" }}>
           <FormTextFieldsIndex
@@ -104,6 +122,9 @@ function FormIndex() {
             size="small"
           />
         </Box>
+        {/* ///////// */}
+
+        {/* pin code */}
         <Box sx={{ width: "48%" }}>
           <FormTextFieldsIndex
             name="firstname"
@@ -114,13 +135,19 @@ function FormIndex() {
             placeholder="Pin Code"
           />
         </Box>
+        {/* ////////// */}
       </Box>
 
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        {/* gender */}
+
         <Box sx={{ width: "48%" }}>
           <FormSelect menuItem={gender} placeholder="Gender" />
         </Box>
+
         <Box sx={{ width: "48%" }}>
+          {/* working experiance */}
+
           <FormTextFieldsIndex
             variant="outlined"
             size="small"
@@ -129,19 +156,39 @@ function FormIndex() {
           />
         </Box>
       </Box>
+
+      {/* Specialisation */}
+
       <Box sx={{ width: "100%" }}>
         <FormSelect menuItem={Specialisation} placeholder="Specialisation" />
       </Box>
+      {/* ///////// */}
+
+      {/* profile picture */}
 
       <UploadInput placeholder="Upload A Profile Picture. Max Size 2MB" />
+
+      {/* ///////////// */}
+
+      {/* date time */}
+
       <Box>
         <DateTime />
       </Box>
+
+      {/* ///////// */}
+
+      {/* checkbox and radio button */}
       <Box sx={{ display: "flex" }}>
         <FormCheckBox label="checkBox 1" />
         <FormCheckBox label="checkBox 2" />
         <FormRadio radio1="Radio1" radio2="Radio2" />
       </Box>
+
+      {/* //////// */}
+
+      {/* Submit Button */}
+
       <Box sx={{ m: "2rem 0" }}>
         <ButtonIndex
           handleClick={handleSubmit}
@@ -150,6 +197,8 @@ function FormIndex() {
           text="Submit Your Form"
         />
       </Box>
+
+      {/* ////// */}
     </Box>
   );
 }
