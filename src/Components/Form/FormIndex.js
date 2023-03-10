@@ -10,6 +10,7 @@ import FormTextFieldsIndex from "./Items/FormTextFieldsIndex";
 
 import UploadInput from "./Items/UploadInput";
 import TimeSlotPicker from "./Items/TimeSlotPicker";
+import TimeRange from "./Items/TimeRange";
 
 function FormIndex() {
   const [data, setData] = useState({
@@ -213,9 +214,15 @@ function FormIndex() {
       {/* ///////////// */}
 
       {/* diganose time */}
-      <Box>
-        <TimeSlotPicker />
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box sx={{ width: "48%" }}>
+          <TimeSlotPicker label="shift start timing" />
+        </Box>
+        <Box sx={{ width: "48%" }}>
+          <TimeSlotPicker label="shift end timing" />
+        </Box>
       </Box>
+      {/* <TimeRange /> */}
 
       {/* date time */}
 

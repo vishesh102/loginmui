@@ -6,7 +6,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
 import { MobileTimePicker } from "@mui/x-date-pickers/MobileTimePicker";
 
-function TimeSlotPicker() {
+function TimeSlotPicker({ label }) {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoContainer
@@ -17,7 +17,7 @@ function TimeSlotPicker() {
           "StaticTimePicker",
         ]}
       >
-        <DemoItem label="Slot Time">
+        <DemoItem label={label}>
           <MobileTimePicker defaultValue={dayjs("2022-04-17T15:30")} />
         </DemoItem>
       </DemoContainer>
