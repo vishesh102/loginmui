@@ -1,14 +1,7 @@
 import React from "react";
 import { Button, Box } from "@mui/material";
 
-function ButtonIndex({
-  variant,
-  selectImg,
-  text,
-
-  color,
-  background,
-}) {
+function ButtonIndex({ variant, selectImg, text, hColor, color, background }) {
   return (
     <Box>
       <Button
@@ -16,6 +9,9 @@ function ButtonIndex({
           color: color,
           borderColor: color,
           backgroundColor: { background },
+          ":hover": {
+            backgroundColor: hColor,
+          },
         }}
         variant={variant}
         component="label"

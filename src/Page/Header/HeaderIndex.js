@@ -21,6 +21,7 @@ function HeaderIndex() {
           color="primary.main"
           variant="contained"
           text="signup"
+          hColor="white"
         />
       </Box>
     </Box>
