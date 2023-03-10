@@ -1,5 +1,4 @@
-import { ImportContacts, TimesOneMobiledata } from "@mui/icons-material";
-import { Box, display } from "@mui/system";
+import { Box } from "@mui/system";
 import React from "react";
 import ButtonIndex from "../Button/ButtonIndex";
 import DateTime from "./Items/DateTime";
@@ -107,10 +106,18 @@ function FormIndex() {
       {/* state and city */}
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box sx={{ width: "48%" }}>
-          <FormSelect menuItem={state} placeholder="chose your state" />
+          <FormSelect
+            select={true}
+            menuItem={state}
+            placeholder="chose your state"
+          />
         </Box>
         <Box sx={{ width: "48%" }}>
-          <FormSelect menuItem={city} placeholder="chose your city" />
+          <FormSelect
+            select={true}
+            menuItem={city}
+            placeholder="chose your city"
+          />
         </Box>
       </Box>
 
@@ -143,7 +150,7 @@ function FormIndex() {
         {/* gender */}
 
         <Box sx={{ width: "48%" }}>
-          <FormSelect menuItem={gender} placeholder="Gender" />
+          <FormSelect select={true} menuItem={gender} placeholder="Gender" />
         </Box>
 
         <Box sx={{ width: "48%" }}>
@@ -161,7 +168,11 @@ function FormIndex() {
       {/* Specialisation */}
 
       <Box sx={{ width: "100%" }}>
-        <FormSelect menuItem={Specialisation} placeholder="Specialisation" />
+        <FormSelect
+          select={true}
+          menuItem={Specialisation}
+          placeholder="Specialisation"
+        />
       </Box>
       {/* ///////// */}
 

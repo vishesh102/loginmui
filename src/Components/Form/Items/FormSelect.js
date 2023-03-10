@@ -1,7 +1,14 @@
 import React from "react";
-import { FormControl, InputLabel, Select, MenuItem, Box } from "@mui/material";
+import {
+  FormControl,
+  InputLabel,
+  select,
+  MenuItem,
+  Box,
+  TextField,
+} from "@mui/material";
 
-function FormSelect({ menuItem, placeholder }) {
+function FormSelect({ menuItem, placeholder, select }) {
   const [item, setItem] = React.useState("");
 
   const handleChange = (event) => {
@@ -11,14 +18,21 @@ function FormSelect({ menuItem, placeholder }) {
   return (
     <Box sx={{ m: "1rem 0" }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">{placeholder}</InputLabel>
-        <Select
+        {/* <InputLabel
           size="small"
-          sx={{ background: "#F9F9F9" }}
+          sx={{ p: "0 -2rem" }}
+          id="demo-simple-select-label"
+        >
+          {placeholder}
+        </InputLabel> */}
+        <TextField
+          select={select}
+          size="small"
+          sx={{ background: "#F9F9F9", margin: "dence" }}
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={item}
-          label="Age"
+          label={placeholder}
           onChange={handleChange}
         >
           {menuItem.map((item, i) => {
@@ -28,7 +42,7 @@ function FormSelect({ menuItem, placeholder }) {
               </MenuItem>
             );
           })}
-        </Select>
+        </TextField>
       </FormControl>
     </Box>
   );
