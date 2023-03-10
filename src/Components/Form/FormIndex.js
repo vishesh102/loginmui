@@ -1,4 +1,4 @@
-import { ImportContacts } from "@mui/icons-material";
+import { ImportContacts, TimesOneMobiledata } from "@mui/icons-material";
 import { Box, display } from "@mui/system";
 import React from "react";
 import ButtonIndex from "../Button/ButtonIndex";
@@ -10,6 +10,7 @@ import FormSelect from "./Items/FormSelect";
 import FormTextFieldsIndex from "./Items/FormTextFieldsIndex";
 
 import UploadInput from "./Items/UploadInput";
+import TimeSlotPicker from "./Items/TimeSlotPicker";
 
 function FormIndex() {
   const [data, setData] = useState({
@@ -170,6 +171,11 @@ function FormIndex() {
 
       {/* ///////////// */}
 
+      {/* diganose time */}
+      <Box>
+        <TimeSlotPicker />
+      </Box>
+
       {/* date time */}
 
       <Box>
@@ -177,7 +183,6 @@ function FormIndex() {
       </Box>
 
       {/* ///////// */}
-
       {/* checkbox and radio button */}
       <Box sx={{ display: "flex" }}>
         <FormCheckBox label="checkBox 1" />
