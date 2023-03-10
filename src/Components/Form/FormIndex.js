@@ -93,6 +93,36 @@ function FormIndex() {
       </Box>
       {/* // */}
 
+      {/* password and Confirm password */}
+
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box sx={{ width: "48%" }}>
+          <FormTextFieldsIndex
+            name="password"
+            onChange={onChange}
+            data={data}
+            type="password"
+            variant="outlined"
+            size="small"
+            placeholder="Enter Password"
+          />
+        </Box>
+
+        <Box sx={{ width: "48%" }}>
+          <FormTextFieldsIndex
+            setData={setData}
+            onChange={onChange}
+            data={data}
+            name="cPassword"
+            variant="outlined"
+            size="small"
+            type="password"
+            placeholder="Confirm Password"
+          />
+        </Box>
+      </Box>
+      {/* // */}
+
       {/* Descripton */}
       <Box>
         <FormTextFieldsIndex
