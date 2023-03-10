@@ -6,7 +6,6 @@ function FormSelect({ menuItem, placeholder }) {
 
   const handleChange = (event) => {
     setItem(event.target.value);
-    // console.log(event.target.value);
   };
 
   return (

@@ -1,10 +1,20 @@
 import React from "react";
 import { Box, TextField } from "@mui/material";
 
-function FormTextFieldsIndex({ size, variant, multiline, placeholder }) {
+function FormTextFieldsIndex({
+  size,
+
+  onChange,
+  type,
+  variant,
+  multiline,
+  placeholder,
+}) {
+  const handleChange = () => {};
   return (
     <Box sx={{ mt: "1rem", mb: "1rem" }}>
       <TextField
+        onChange={onChange}
         id="outlined-basic"
         label={placeholder}
         sx={{ background: "#F9F9F9" }}
@@ -13,6 +23,7 @@ function FormTextFieldsIndex({ size, variant, multiline, placeholder }) {
         fullWidth
         multiline={multiline}
         rows={6}
+        type={type}
       />
     </Box>
   );

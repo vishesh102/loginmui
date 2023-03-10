@@ -1,10 +1,19 @@
 import React from "react";
 import { Button, Box } from "@mui/material";
 
-function ButtonIndex({ variant, selectImg, text, hColor, color, background }) {
+function ButtonIndex({
+  handleClick,
+  variant,
+  selectImg,
+  text,
+  hColor,
+  color,
+  background,
+}) {
   return (
     <Box>
       <Button
+        onClick={handleClick}
         sx={{
           color: color,
           borderColor: color,
