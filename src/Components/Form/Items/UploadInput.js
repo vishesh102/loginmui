@@ -11,13 +11,13 @@ function UploadInput() {
     <Box>
       <Box
         sx={{
-          background: "#F5F5F5",
+          background: "#F9F9F9",
           border: "1px dashed gray",
           display: "flex",
           justifyContent: "space-between",
           p: "1rem",
           borderRadius: "0.3rem",
-          m: "0.5rem 0",
+          m: "1rem 0",
         }}
         fullWidth
       >

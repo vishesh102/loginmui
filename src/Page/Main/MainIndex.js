@@ -4,7 +4,7 @@ import FormIndex from "../../Components/Form/FormIndex";
 
 function MainIndex() {
   return (
-    <Box sx={{ width: "70%", mx: "auto" }}>
+    <Box sx={{ mx: "auto" }}>
       <FormIndex />
     </Box>
   );

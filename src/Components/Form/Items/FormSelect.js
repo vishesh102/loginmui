@@ -10,12 +10,12 @@ function FormSelect({ menuItem, placeholder }) {
   };
 
   return (
-    <Box sx={{ m: "0.5rem 0" }}>
+    <Box sx={{ m: "1rem 0" }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">{placeholder}</InputLabel>
         <Select
           size="small"
-          sx={{ background: "#F5F5F5" }}
+          sx={{ background: "#F9F9F9" }}
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={item}

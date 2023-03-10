@@ -1,12 +1,12 @@
 import React from "react";
-import { FormControlLabel } from "@mui/material";
+import { Box, FormControlLabel } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 
 function FormCheckBox({ label }) {
   return (
-    <div>
+    <Box sx={{ m: "1rem 0" }}>
       <FormControlLabel control={<Checkbox defaultChecked />} label={label} />
-    </div>
+    </Box>
   );
 }
 

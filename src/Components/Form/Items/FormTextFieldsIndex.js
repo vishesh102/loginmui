@@ -3,11 +3,11 @@ import { Box, TextField } from "@mui/material";
 
 function FormTextFieldsIndex({ size, variant, multiline, placeholder }) {
   return (
-    <Box sx={{ mt: "0.5rem", mb: "0.5rem" }}>
+    <Box sx={{ mt: "1rem", mb: "1rem" }}>
       <TextField
         id="outlined-basic"
         label={placeholder}
-        sx={{ background: "#F5F5F5" }}
+        sx={{ background: "#F9F9F9" }}
         variant={variant}
         size={size}
         fullWidth

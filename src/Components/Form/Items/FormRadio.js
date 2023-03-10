@@ -1,10 +1,10 @@
 import React from "react";
-import { FormControlLabel, RadioGroup } from "@mui/material";
+import { Box, FormControlLabel, RadioGroup } from "@mui/material";
 import Radio from "@mui/material/Radio";
 
 function FormRadio({ radio1, radio2 }) {
   return (
-    <div>
+    <Box sx={{ m: "1rem 0" }}>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
@@ -14,7 +14,7 @@ function FormRadio({ radio1, radio2 }) {
         <FormControlLabel value={radio1} control={<Radio />} label={radio1} />
         <FormControlLabel value={radio2} control={<Radio />} label={radio2} />
       </RadioGroup>
-    </div>
+    </Box>
   );
 }
 

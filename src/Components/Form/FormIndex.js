@@ -14,9 +14,11 @@ function FormIndex() {
   const state = ["up", "uk", "punjab"];
   const city = ["modinagar", "chandigarh", "ghaziabd"];
   return (
-    <Box sx={{ width: "100%", color: "text.secondary" }}>
+    <Box sx={{ width: "60%", m: "0 auto", color: "text.secondary" }}>
       <Box sx={{ mb: "2rem" }}>
-        <h1>Create an account</h1>
+        <Box sx={{ color: "black" }}>
+          <h1>Create an account</h1>
+        </Box>
         <p>Describe yourself as clearly so that there is no mistake</p>
       </Box>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
