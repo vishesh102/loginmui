@@ -22,7 +22,7 @@ function UploadInput() {
         fullWidth
       >
         <Icon>
-          <Image fontSize="6rem" />
+          <Image sx={{ color: "primary.main" }} fontSize="6rem" />
         </Icon>
         Upload A Profile Picture. Max Size 2MB
         <ButtonIndex

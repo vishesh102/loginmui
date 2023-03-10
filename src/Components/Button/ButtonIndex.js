@@ -1,7 +1,14 @@
 import React from "react";
 import { Button, Box } from "@mui/material";
 
-function ButtonIndex({ variant, selectImg, text, color, background }) {
+function ButtonIndex({
+  variant,
+  selectImg,
+  text,
+
+  color,
+  background,
+}) {
   return (
     <Box>
       <Button

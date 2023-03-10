@@ -1,11 +1,12 @@
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { colors } from "@mui/material";
 
 const theme = createTheme({
   palette: {
     type: "light",
     primary: {
-      main: "#14809E",
+      main: "#08568C",
       light: "#3F3F3F",
     },
     secondary: {
@@ -19,12 +20,15 @@ const theme = createTheme({
     },
     text: {
       primary: "#3F3F3F",
-    },
-    typography: {
-      fontFamily: ["Roboto"],
-      fontSize: 10,
+      secondary: "#696969",
     },
   },
+  // typography: {
+  //   fontFamily: "Roboto",
+  //   htmlFontSize: 13,
+  //   fontSize: 13,
+
+  // },
 });
 
 export default theme;

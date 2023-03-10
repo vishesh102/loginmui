@@ -14,7 +14,7 @@ function FormIndex() {
   const state = ["up", "uk", "punjab"];
   const city = ["modinagar", "chandigarh", "ghaziabd"];
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", color: "text.secondary" }}>
       <Box sx={{ mb: "2rem" }}>
         <h1>Create an account</h1>
         <p>Describe yourself as clearly so that there is no mistake</p>
@@ -68,7 +68,11 @@ function FormIndex() {
         <FormRadio radio1="Radio1" radio2="Radio2" />
       </Box>
       <Box sx={{ m: "2rem 0" }}>
-        <ButtonIndex variant="contained" text="Submit Your Form" />
+        <ButtonIndex
+          color="white"
+          variant="contained"
+          text="Submit Your Form"
+        />
       </Box>
     </Box>
   );
