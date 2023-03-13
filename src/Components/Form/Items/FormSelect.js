@@ -1,19 +1,8 @@
 import React from "react";
-import {
-  FormControl,
-  InputLabel,
-  select,
-  MenuItem,
-  Box,
-  TextField,
-} from "@mui/material";
+import { FormControl, MenuItem, Box, TextField } from "@mui/material";
 
-function FormSelect({ menuItem, placeholder, select }) {
+function FormSelect({ menuItem, placeholder, select, onChange, name }) {
   const [item, setItem] = React.useState("");
-
-  const handleChange = (event) => {
-    setItem(event.target.value);
-  };
 
   return (
     <Box sx={{ m: "1rem 0" }}>
@@ -32,8 +21,9 @@ function FormSelect({ menuItem, placeholder, select }) {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={item}
+          name={name}
           label={placeholder}
-          onChange={handleChange}
+          onChange={onChange}
         >
           {menuItem.map((item, i) => {
             return (

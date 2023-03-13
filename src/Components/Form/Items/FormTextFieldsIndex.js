@@ -3,7 +3,7 @@ import { Box, TextField } from "@mui/material";
 
 function FormTextFieldsIndex({
   size,
-
+  name,
   onChange,
   type,
   variant,
@@ -21,6 +21,7 @@ function FormTextFieldsIndex({
         variant={variant}
         size={size}
         fullWidth
+        name={name}
         multiline={multiline}
         rows={6}
         type={type}
