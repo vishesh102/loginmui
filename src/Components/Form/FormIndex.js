@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useRef } from "react";
 import ButtonIndex from "../Button/ButtonIndex";
 import DateTime from "./Items/DateTime";
 import FormCheckBox from "./Items/FormCheckBox";
@@ -22,12 +22,7 @@ function FormIndex() {
     state: "",
     city: "",
     clinicname: "",
-    pincode: "",
     gender: "",
-    experiance: "",
-    Specialisation: "",
-    shiftStartTime: "",
-    shiftEndTime: "",
   });
   const state = ["up", "uk", "punjab"];
   const city = ["modinagar", "chandigarh", "ghaziabd"];
@@ -39,6 +34,7 @@ function FormIndex() {
     "Children",
     "Gynecologist",
   ];
+
   const handleSubmit = () => {
     console.log(data);
   };
@@ -72,6 +68,7 @@ function FormIndex() {
             name="firstname"
             onChange={onChange}
             variant="outlined"
+            id="outlined-basic1"
             size="small"
             placeholder="Enter Your First Name"
           />
@@ -83,6 +80,7 @@ function FormIndex() {
             onChange={onChange}
             name="lastname"
             variant="outlined"
+            id="outlined-basic2"
             size="small"
             placeholder="Enter Your Last Name"
           />
@@ -97,6 +95,7 @@ function FormIndex() {
           variant="outlined"
           size="small"
           onChange={onChange}
+          id="outlined-basic3"
           name="email"
           placeholder="Enter Your Email Id Name"
         />
@@ -109,6 +108,7 @@ function FormIndex() {
         <Box sx={{ width: "48%" }}>
           <FormTextFieldsIndex
             name="password"
+            id="outlined-basic4"
             onChange={onChange}
             type="password"
             variant="outlined"
@@ -120,6 +120,7 @@ function FormIndex() {
         <Box sx={{ width: "48%" }}>
           <FormTextFieldsIndex
             setData={setData}
+            id="outlined-basic5"
             onChange={onChange}
             name="cPassword"
             variant="outlined"
@@ -137,8 +138,10 @@ function FormIndex() {
           name="description"
           onChange={onChange}
           variant="outlined"
+          id="outlined-basic6"
           placeholder="Description"
           multiline={true}
+          rows={6}
         />
       </Box>
       {/* // */}
@@ -150,6 +153,7 @@ function FormIndex() {
             select={true}
             name="state"
             onChange={onChange}
+            id="outlined-basic7"
             menuItem={state}
             placeholder="chose your state"
           />
@@ -158,8 +162,9 @@ function FormIndex() {
           <FormSelect
             select={true}
             menuItem={city}
+            data={data}
             name="city"
-            onChange={onChange}
+            id="outlined-basic8"
             placeholder="chose your city"
           />
         </Box>
@@ -171,6 +176,7 @@ function FormIndex() {
           <FormTextFieldsIndex
             variant="outlined"
             placeholder="Clinic Name"
+            id="outlined-basic9"
             size="small"
             name="clinicname"
             onChange={onChange}
@@ -185,6 +191,7 @@ function FormIndex() {
             onChange={onChange}
             variant="outlined"
             size="small"
+            id="outlined-basic10"
             placeholder="Pin Code"
           />
         </Box>
@@ -199,8 +206,8 @@ function FormIndex() {
             select={true}
             menuItem={gender}
             name="gender"
-            onChange={onChange}
             placeholder="Gender"
+            id="outlined-basic11"
           />
         </Box>
 
@@ -209,9 +216,9 @@ function FormIndex() {
 
           <FormTextFieldsIndex
             name="experiance"
-            onChange={onChange}
             variant="outlined"
             size="small"
+            id="outlined-basic12"
             placeholder="Working Experiance (In Years)"
             type="number"
           />
@@ -223,8 +230,8 @@ function FormIndex() {
       <Box sx={{ width: "100%" }}>
         <FormSelect
           name="specialisation"
-          onChange={onChange}
           select={true}
+          id="outlined-basic13"
           menuItem={Specialisation}
           placeholder="Specialisation"
         />
@@ -242,14 +249,14 @@ function FormIndex() {
         <Box sx={{ width: "48%" }}>
           <TimeSlotPicker
             label="shift start timing"
-            name="shiftStartTime"
+            name="specialisation"
             onChange={onChange}
           />
         </Box>
         <Box sx={{ width: "48%" }}>
           <TimeSlotPicker
             label="shift end timing"
-            name="shiftEndTime"
+            name="specialisation"
             onChange={onChange}
           />
         </Box>

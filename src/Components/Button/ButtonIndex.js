@@ -23,7 +23,6 @@ function ButtonIndex({
           },
         }}
         variant={variant}
-        component="label"
       >
         {text}
         {selectImg}

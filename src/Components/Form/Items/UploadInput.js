@@ -19,7 +19,6 @@ function UploadInput() {
           borderRadius: "0.3rem",
           m: "1rem 0",
         }}
-        fullWidth
       >
         <Icon>
           <Image sx={{ color: "primary.main" }} fontSize="6rem" />

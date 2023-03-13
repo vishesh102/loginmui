@@ -4,8 +4,11 @@ import { Box, TextField } from "@mui/material";
 function FormTextFieldsIndex({
   size,
   name,
+  rows,
+  refe,
   onChange,
   type,
+  id,
   variant,
   multiline,
   placeholder,
@@ -15,15 +18,16 @@ function FormTextFieldsIndex({
     <Box sx={{ mt: "1rem", mb: "1rem" }}>
       <TextField
         onChange={onChange}
-        id="outlined-basic"
+        id={id}
         label={placeholder}
         sx={{ background: "#F9F9F9" }}
         variant={variant}
         size={size}
+        ref={refe}
         fullWidth
         name={name}
         multiline={multiline}
-        rows={6}
+        rows={rows}
         type={type}
       />
     </Box>
