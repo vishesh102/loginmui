@@ -5,10 +5,10 @@ import { Label } from "@mui/icons-material";
 
 function TimeSlotPicker({ label, onChange, name }) {
   return (
-    <div>
+    <>
       <label style={{ margin: " 0 4rem" }}>{label}</label>
       <Input type="time" name={name} onChange={onChange} />
-    </div>
+    </>
   );
 }
 export default TimeSlotPicker;
