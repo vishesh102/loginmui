@@ -4,6 +4,9 @@ import React from "react";
 import ButtonIndex from "../../Components/Button/ButtonIndex";
 
 function HeaderIndex() {
+  const handleClick = () => {
+    console.log("signup button clicked");
+  };
   return (
     <Box
       sx={{
@@ -21,6 +24,7 @@ function HeaderIndex() {
           color="primary.main"
           variant="contained"
           text="signup"
+          handleClick={handleClick}
           hColor="white"
         />
       </Box>

@@ -10,8 +10,17 @@ function ButtonIndex({
   color,
   background,
 }) {
-  return (
-    <Box>
+  const handleChange = () => {
+    if (
+      variant !== undefined &&
+      (text !== undefined || typeof text === "string") &&
+      handleClick !== undefined
+    )
+      return true;
+  };
+
+  if (handleChange) {
+    return (
       <Button
         onClick={handleClick}
         sx={{
@@ -27,8 +36,10 @@ function ButtonIndex({
         {text}
         {selectImg}
       </Button>
-    </Box>
-  );
+    );
+  } else {
+    alert("enter valid button props");
+  }
 }
 
 export default ButtonIndex;

@@ -7,6 +7,9 @@ import { Icon } from "@mui/material";
 import { Image } from "@mui/icons-material";
 
 function UploadInput() {
+  const handleClick = () => {
+    console.log("upload clicked");
+  };
   return (
     <Box>
       <Box
@@ -27,8 +30,9 @@ function UploadInput() {
         <ButtonIndex
           color="gray"
           background="white"
-          variant="outlined"
-          text="Upload"
+          variant="contained"
+          handleClick={handleClick}
+          text="upload"
           selectImg={<input hidden accept="image/*" multiple type="file" />}
         />
       </Box>

@@ -34,7 +34,7 @@ function FormIndex() {
     "Children",
     "Gynecologist",
   ];
-
+  const variant = "outlined";
   const handleSubmit = () => {
     console.log(data);
   };
@@ -51,178 +51,164 @@ function FormIndex() {
 
   return (
     <Box sx={{ width: "60%", m: "0 auto", color: "text.secondary" }}>
-      <Box sx={{ mb: "2rem" }}>
-        {/* Heading and Sub heading of register page */}
+      <h1 style={{ color: "black" }}>Create an account</h1>
 
-        <Box sx={{ color: "black" }}>
-          <h1>Create an account</h1>
-        </Box>
-        <p>Describe yourself as clearly so that there is no mistake</p>
-      </Box>
-
-      {/* firstname and last name */}
+      <p>Describe yourself as clearly so that there is no mistake</p>
 
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box sx={{ width: "48%" }}>
-          <FormTextFieldsIndex
-            name="firstname"
-            onChange={onChange}
-            variant="outlined"
-            id="outlined-basic1"
-            size="small"
-            placeholder="Enter Your First Name"
-          />
-        </Box>
+        <FormTextFieldsIndex
+          sx={{ width: "48%" }}
+          name="firstname"
+          onChange={onChange}
+          variant="outlined"
+          id="outlined-basic1"
+          size="small"
+          placeholder="Enter Your First Name"
+        />
 
-        <Box sx={{ width: "48%" }}>
-          <FormTextFieldsIndex
-            setData={setData}
-            onChange={onChange}
-            name="lastname"
-            variant="outlined"
-            id="outlined-basic2"
-            size="small"
-            placeholder="Enter Your Last Name"
-          />
-        </Box>
+        <FormTextFieldsIndex
+          sx={{ width: "48%" }}
+          setData={setData}
+          onChange={onChange}
+          name="lastname"
+          variant="outlined"
+          id="outlined-basic2"
+          size="small"
+          placeholder="Enter Your Last Name"
+        />
       </Box>
       {/* // */}
 
       {/* email */}
 
-      <Box>
-        <FormTextFieldsIndex
-          variant="outlined"
-          size="small"
-          onChange={onChange}
-          id="outlined-basic3"
-          name="email"
-          placeholder="Enter Your Email Id Name"
-        />
-      </Box>
+      <FormTextFieldsIndex
+        sx={{ width: "48%" }}
+        variant="outlined"
+        size="small"
+        onChange={onChange}
+        id="outlined-basic3"
+        name="email"
+        placeholder="Enter Your Email Id Name"
+      />
+
       {/* // */}
 
       {/* password and Confirm password */}
 
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box sx={{ width: "48%" }}>
-          <FormTextFieldsIndex
-            name="password"
-            id="outlined-basic4"
-            onChange={onChange}
-            type="password"
-            variant="outlined"
-            size="small"
-            placeholder="Enter Password"
-          />
-        </Box>
-
-        <Box sx={{ width: "48%" }}>
-          <FormTextFieldsIndex
-            setData={setData}
-            id="outlined-basic5"
-            onChange={onChange}
-            name="cPassword"
-            variant="outlined"
-            size="small"
-            type="password"
-            placeholder="Confirm Password"
-          />
-        </Box>
-      </Box>
-      {/* // */}
-
-      {/* Descripton */}
-      <Box>
         <FormTextFieldsIndex
-          name="description"
+          sx={{ width: "48%" }}
+          name="password"
+          id="outlined-basic4"
           onChange={onChange}
+          type="password"
           variant="outlined"
-          id="outlined-basic6"
-          placeholder="Description"
-          multiline={true}
-          rows={6}
+          size="small"
+          placeholder="Enter Password"
+        />
+
+        <FormTextFieldsIndex
+          sx={{ width: "48%" }}
+          setData={setData}
+          id="outlined-basic5"
+          onChange={onChange}
+          name="cPassword"
+          variant="outlined"
+          size="small"
+          type="password"
+          placeholder="Confirm Password"
         />
       </Box>
       {/* // */}
 
+      {/* Descripton */}
+
+      <FormTextFieldsIndex
+        sx={{ width: "48%" }}
+        name="description"
+        onChange={onChange}
+        variant="outlined"
+        id="outlined-basic6"
+        placeholder="Description"
+        multiline={true}
+        rows={6}
+      />
+
+      {/* // */}
+
       {/* state and city */}
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box sx={{ width: "48%" }}>
-          <FormSelect
-            select={true}
-            name="state"
-            onChange={onChange}
-            id="outlined-basic7"
-            menuItem={state}
-            placeholder="chose your state"
-          />
-        </Box>
-        <Box sx={{ width: "48%" }}>
-          <FormSelect
-            select={true}
-            menuItem={city}
-            data={data}
-            name="city"
-            id="outlined-basic8"
-            placeholder="chose your city"
-          />
-        </Box>
+        <FormSelect
+          sx={{ width: "48%" }}
+          select={true}
+          name="state"
+          onChange={onChange}
+          id="outlined-basic7"
+          menuItem={state}
+          placeholder="chose your state"
+        />
+
+        <FormSelect
+          select={true}
+          sx={{ width: "48%" }}
+          menuItem={city}
+          data={data}
+          name="city"
+          onChange={onChange}
+          id="outlined-basic8"
+          placeholder="chose your city"
+        />
       </Box>
 
       {/* clinic name */}
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box sx={{ width: "48%" }}>
-          <FormTextFieldsIndex
-            variant="outlined"
-            placeholder="Clinic Name"
-            id="outlined-basic9"
-            size="small"
-            name="clinicname"
-            onChange={onChange}
-          />
-        </Box>
+        <FormTextFieldsIndex
+          variant="outlined"
+          placeholder="Clinic Name"
+          id="outlined-basic9"
+          size="small"
+          name="clinicname"
+          onChange={onChange}
+        />
+
         {/* ///////// */}
 
         {/* pin code */}
-        <Box sx={{ width: "48%" }}>
-          <FormTextFieldsIndex
-            name="pincode"
-            onChange={onChange}
-            variant="outlined"
-            size="small"
-            id="outlined-basic10"
-            placeholder="Pin Code"
-          />
-        </Box>
+
+        <FormTextFieldsIndex
+          name="pincode"
+          onChange={onChange}
+          variant="outlined"
+          size="small"
+          id="outlined-basic10"
+          placeholder="Pin Code"
+        />
+
         {/* ////////// */}
       </Box>
 
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         {/* gender */}
 
-        <Box sx={{ width: "48%" }}>
-          <FormSelect
-            select={true}
-            menuItem={gender}
-            name="gender"
-            placeholder="Gender"
-            id="outlined-basic11"
-          />
-        </Box>
+        <FormSelect
+          select={true}
+          menuItem={gender}
+          onChange={onChange}
+          name="gender"
+          placeholder="Gender"
+          id="outlined-basic11"
+        />
 
-        <Box sx={{ width: "48%" }}>
-          {/* working experiance */}
+        {/* working experiance */}
 
-          <FormTextFieldsIndex
-            name="experiance"
-            variant="outlined"
-            size="small"
-            id="outlined-basic12"
-            placeholder="Working Experiance (In Years)"
-            type="number"
-          />
-        </Box>
+        <FormTextFieldsIndex
+          name="experiance"
+          variant="outlined"
+          size="small"
+          id="outlined-basic12"
+          placeholder="Working Experiance (In Years)"
+          // type="number"
+        />
       </Box>
 
       {/* Specialisation */}
@@ -231,6 +217,7 @@ function FormIndex() {
         <FormSelect
           name="specialisation"
           select={true}
+          onChange={onChange}
           id="outlined-basic13"
           menuItem={Specialisation}
           placeholder="Specialisation"
@@ -249,14 +236,14 @@ function FormIndex() {
         <Box sx={{ width: "48%" }}>
           <TimeSlotPicker
             label="shift start timing"
-            name="specialisation"
+            name="shiftstart"
             onChange={onChange}
           />
         </Box>
         <Box sx={{ width: "48%" }}>
           <TimeSlotPicker
             label="shift end timing"
-            name="specialisation"
+            name="shiftend"
             onChange={onChange}
           />
         </Box>
@@ -265,17 +252,17 @@ function FormIndex() {
 
       {/* date time */}
 
-      <Box>
+      {/* <Box>
         <DateTime />
-      </Box>
+      </Box> */}
 
       {/* ///////// */}
       {/* checkbox and radio button */}
-      <Box sx={{ display: "flex" }}>
+      {/* <Box sx={{ display: "flex" }}>
         <FormCheckBox label="checkBox 1" />
         <FormCheckBox label="checkBox 2" />
         <FormRadio radio1="Radio1" radio2="Radio2" />
-      </Box>
+      </Box> */}
 
       {/* //////// */}
 
@@ -284,7 +271,6 @@ function FormIndex() {
       <Box sx={{ m: "2rem 0" }}>
         <ButtonIndex
           handleClick={handleSubmit}
-          color="white"
           variant="contained"
           text="Submit Your Form"
         />

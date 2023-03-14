@@ -15,22 +15,20 @@ function FormTextFieldsIndex({
 }) {
   const handleChange = () => {};
   return (
-    <Box sx={{ mt: "1rem", mb: "1rem" }}>
-      <TextField
-        onChange={onChange}
-        id={id}
-        label={placeholder}
-        sx={{ background: "#F9F9F9" }}
-        variant={variant}
-        size={size}
-        ref={refe}
-        fullWidth
-        name={name}
-        multiline={multiline}
-        rows={rows}
-        type={type}
-      />
-    </Box>
+    <TextField
+      sx={{ m: "1rem 0", background: "#F9F9F9" }}
+      onChange={onChange}
+      id={id}
+      label={placeholder}
+      variant={variant}
+      size={size}
+      ref={refe}
+      name={name}
+      fullWidth
+      multiline={multiline}
+      rows={rows}
+      type={type}
+    />
   );
 }
 
